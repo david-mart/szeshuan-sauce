@@ -1,0 +1,81 @@
+{
+  "identity": "car",
+  "connection": "default",
+  "displayedAttribute": "",
+  "schema": true,
+  "attributes": {
+    "name": {
+      "type": "text"
+    },
+    "year": {
+      "type": "integer"
+    },
+    "license": {
+      "type": "string"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "cas": {
+      "type": "json"
+    },
+    "createdBy": {
+      "model": "user"
+    },
+    "updatedBy": {
+      "model": "user"
+    },
+    "contributors": {
+      "collection": "user",
+      "via": "cars"
+    },
+    "lang": {
+      "type": "string",
+      "required": true
+    },
+    "template": {
+      "type": "string",
+      "required": true
+    },
+    "id_ref": {
+      "type": "int"
+    },
+    "driver": {
+      "model": "driver"
+    }
+  },
+  "autoCreatedAt": true,
+  "autoUpdatedAt": true,
+  "migrate": "alter",
+  "defaultTemplate": "default",
+  "templates": {
+    "default": {
+      "attributes": {
+        "name": {
+          "type": "string"
+        },
+        "year": {
+          "type": "integer"
+        },
+        "license": {
+          "type": "string"
+        },
+        "date": {
+          "type": "datetime"
+        }
+      },
+      "displayedAttribute": ""
+    },
+    "test": {
+      "attributes": {
+        "name": {
+          "type": "string"
+        },
+        "cas": {
+          "type": "json"
+        }
+      },
+      "displayedAttribute": "name"
+    }
+  }
+}

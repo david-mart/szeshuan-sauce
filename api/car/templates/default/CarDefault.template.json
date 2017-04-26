@@ -1,0 +1,11 @@
+{
+  "default": {
+    "attributes": {
+      "name": {},
+      "year": {},
+      "license": {},
+      "date": {}
+    },
+    "displayedAttribute": ""
+  }
+}

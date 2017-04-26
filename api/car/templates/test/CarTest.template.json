@@ -1,0 +1,9 @@
+{
+  "test": {
+    "attributes": {
+      "name": {},
+      "cas": {}
+    },
+    "displayedAttribute": "name"
+  }
+}

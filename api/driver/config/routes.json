@@ -1,0 +1,57 @@
+{
+  "routes": {
+    "GET /driver": {
+      "controller": "Driver",
+      "action": "find",
+      "policies": [
+        "isAuthorized"
+      ]
+    },
+    "GET /driver/:id": {
+      "controller": "Driver",
+      "action": "findOne",
+      "policies": [
+        "isAuthorized"
+      ]
+    },
+    "POST /driver": {
+      "controller": "Driver",
+      "action": "create",
+      "policies": [
+        "isAuthorized",
+        "addDataCreate"
+      ]
+    },
+    "PUT /driver/:id": {
+      "controller": "Driver",
+      "action": "update",
+      "policies": [
+        "isAuthorized",
+        "addDataUpdate"
+      ]
+    },
+    "DELETE /driver/:id": {
+      "controller": "Driver",
+      "action": "destroy",
+      "policies": [
+        "isAuthorized"
+      ]
+    },
+    "POST /driver/:parentId/:relation": {
+      "controller": "Driver",
+      "action": "add",
+      "policies": [
+        "isAuthorized",
+        "addDataCreate"
+      ]
+    },
+    "DELETE /driver/:parentId/:relation/:id": {
+      "controller": "Driver",
+      "action": "remove",
+      "policies": [
+        "isAuthorized",
+        "addDataUpdate"
+      ]
+    }
+  }
+}
